@@ -1,0 +1,38 @@
+# base command
+
+date                                                        # 날짜와 시간 출력
+
+who                                                         # 로그인된 사용자 확인
+who am i                                                    # 나의 정보
+
+echo                                                        # 문자 출력
+echo this is a test
+echo 
+echo 1          2      3          4                         # 공백 없어짐
+
+ls                                                          # 파일 출력
+
+cat                                                         # 파일 내용 출력
+
+wc                                                          # 파일의 단어 수 계산(라인 수, 단어 수, 문자 수)
+wc -l test                                                  # 라인 수 계산
+wc -c test                                                  # 문자 수 계산
+wc -w test                                                  # 단어 수 계산
+
+cp                                                          # 파일 복사
+
+mv                                                          # 파일 이름 변경
+
+rm                                                          # 파일 삭제
+
+pwd                                                         # 작업 디렉토리 출력
+
+cd                                                          # 디렉토리 이동
+
+mkdir                                                       # 디렉토리 생성
+
+ln                                                          # 파일 링크
+ln from to
+
+rmdir                                                       # 디렉토리 삭제
+
