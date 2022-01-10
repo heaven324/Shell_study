@@ -137,7 +137,30 @@ sed 's/ //g' intro                                          # 위와 같은 결�
 
 
 grep pattern files                                          # 지정 패턴 검색
+grep Unix intro
+sed -n '/Unix/p' intro                                      # 위와 같은 결과
+grep [tT]he intro
+grep -i the intro                                           # 위와 같은 결과
+grep -v 'Unix' intro                                        # 일치하지 않는 문자 찾기 옵션
+grep -l 'Move_history' *.c                                  # 지정된 패턴을 포함하는 파일 목록 출력
+grep -n 'Move_history' testch.c                             # 일치하면 맨 앞에 라인 번호 표시
 
+
+sort                                                        # 기본 라인별 오름차순 정렬
+sort -u names                                               # 중복라인 제거
+sort -r names                                               # 내림차순 정렬
+sort names > sorted_names
+sort names -o sorted_names                                  # 위와 같은 결과
+sort names -o names                                         # 같은 파일 변경으로도 사용 가능
+sort -n data                                                # 첫 글자를 숫자로 간주하고 정렬
+sort -k2n data                                              # 두번째 필드의 첫글자를 숫자로 간주하고 이 기준으로 정렬
+sort -k3n -t: /etc/passwd                                   # 구분자 : 기준으로 세번쩨 필드 중심으로 정렬 
+
+
+uniq in_file out_file                                       # 연속라인 중복 제거 출력
+sort names | uniq -d                                        # 중복 라인을 출력
+sort /etc/passwd | cut -f1 -d: | uniq -d
+sort names | uniq -c                                        # 라인의 중복 개수 계산
 
 
 
